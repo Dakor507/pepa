@@ -1,0 +1,34 @@
+N=int(input("Введите кол-во студентов "))
+a=[str(input("Введите имена студентов ")).split() for i in range(N)]
+m=int(input("Введите кол-во предметов"))
+for i in range(len(a)):
+print(a[i])
+print("Введите оценки студентов : ")
+b=[]
+for i in range(len(a)):
+c=[]
+print(a[i],"=")
+for j in range(4):
+c.append(int(input()))
+b.append(c)
+print(b)
+def step (array, N) :
+    if array.count(5)==N:
+        m="Повышенная стипендия"
+    if (array.count(3)==0) and (array.count(5) !=N):
+        s="Обычная стипендия"
+    if array.count(3)!=0:
+        s="Нет стипендии"
+    return s
+for i in range(len(student)):
+    for j in range(m):
+        b.append(int(input()))
+    a.append(b)
+for i in range(len(student)):
+    sr=0
+    s=0
+    for j in range(len(a[i])):
+        s+= a[i][j]
+        sr= s/m
+print(student[i],':', a[i], 'Средняя оценка', sr, 'Стипендия:', step(a[i], k))
+print()
